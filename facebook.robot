@@ -2,14 +2,14 @@
 Library    SeleniumLibrary
 
 *** Variable ***
-${EMAIL}    xxxx@hotmail.com
-${PASSWORD}     xxxx
+${EMAIL}    clinton_toey@hotmail.com
+${PASSWORD}     Toeyya_9929355
 ${CHROME_DRIVER_PATH}   /usr/local/bin/chromedriver
 
 *** Test Case ***
 Post Comment On Facebook
     Open facebook page
-    Post Comment     ${EMAIL}    ${PASSWORD}
+    Post Comment
 
 *** Keywords ***
 Open facebook page
@@ -23,14 +23,12 @@ Set Chrome Disable Notifications
     [Return]    ${chrome_options}
 
 Post Comment
-    [Arguments]     ${EMAIL}    ${PASSWORD}
-    Sign In With Credential     ${EMAIL}    ${PASSWORD}
+    Sign In With Credential
     Post Model Is Already Popup
     Write Comment
 
 
 Sign In With Credential
-    [Arguments]     ${EMAIL}    ${PASSWORD}
     Input Text    email    ${EMAIL}
     Input Password    pass    ${PASSWORD}
     Click Button     xpath=//*[@id="loginbutton"]/input 

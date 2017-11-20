@@ -25,13 +25,20 @@ Set Chrome Disable Notifications
 Post Comment
     [Arguments]     ${EMAIL}    ${PASSWORD}
     Sign In With Credential     ${EMAIL}    ${PASSWORD}
-    Click Link      xpath=//*/div[@id="feedx_sprouts_container"]//*/a[@data-attachment-type="STATUS"]
-    Wait Until Element Is Visible   //*/table[@role="presentation"]
-    Press Key       xpath=//*/div[@id="feedx_sprouts_container"]//div[@data-testid="status-attachment-mentions-input"]    Robot Framework
-    Click Button    xpath=//*/button[@data-testid="react-composer-post-button"]
+    Post Model Is Already Popup
+    Write Comment
+
 
 Sign In With Credential
     [Arguments]     ${EMAIL}    ${PASSWORD}
     Input Text    email    ${EMAIL}
     Input Password    pass    ${PASSWORD}
     Click Button     xpath=//*[@id="loginbutton"]/input 
+
+Post Model Is Already Popup
+    Click Link      xpath=//*/div[@id="feedx_sprouts_container"]//*/a[@data-attachment-type="STATUS"]
+    Wait Until Element Is Visible   //*/table[@role="presentation"]
+
+Write Comment
+    Press Key       xpath=//*/div[@id="feedx_sprouts_container"]//div[@data-testid="status-attachment-mentions-input"]    Robot Framework
+    Click Button    xpath=//*/button[@data-testid="react-composer-post-button"]

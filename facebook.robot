@@ -2,8 +2,8 @@
 Library    SeleniumLibrary
 
 *** Variable ***
-${EMAIL}    clinton_toey@hotmail.com
-${PASSWORD}     Toeyya_9929355
+${EMAIL}    xxxx
+${PASSWORD}     xxxx
 ${CHROME_DRIVER_PATH}   /usr/local/bin/chromedriver
 
 *** Test Case ***

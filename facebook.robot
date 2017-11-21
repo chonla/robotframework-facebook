@@ -2,8 +2,8 @@
 Library    SeleniumLibrary
 
 *** Variable ***
-${EMAIL}    xxxx
-${PASSWORD}     xxxx
+${EMAIL}    ${EMPTY}
+${PASSWORD}     ${EMPTY}
 ${CHROME_DRIVER_PATH}   /usr/local/bin/chromedriver
 
 *** Test Case ***
@@ -26,6 +26,7 @@ Post Comment
     Sign In With Credential
     Post Model Is Already Popup
     Write Comment
+    [Teardown]    Close Browser
 
 
 Sign In With Credential
